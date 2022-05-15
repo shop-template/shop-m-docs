@@ -2,6 +2,7 @@ const { defaultTheme } = require('vuepress')
 const { searchPlugin } = require('@vuepress/plugin-search')
 
 module.exports = {
+  base: '/shop-m-docs/',
   lang: 'zh-CN',
   title: 'shop-m使用文档',
   description: 'shop-m使用文档',
