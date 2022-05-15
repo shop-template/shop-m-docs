@@ -18,7 +18,12 @@ module.exports = {
         link: '/',
       },
     ],
-    repo: 'shop-template/shop-m'
+    repo: 'shop-template/shop-m',
+    editLinkText: '编辑此页',
+    docsRepo: 'https://github.com/shop-template/shop-m-docs',
+    docsDir: 'docs',
+    lastUpdatedText: '最新更新时间',
+    contributorsText: '贡献者列表'
   }),
   plugins: [
     searchPlugin({
