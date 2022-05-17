@@ -6,7 +6,7 @@ import pathList from './../pathList.js'
 
 const route = useRoute()
 const iframeId = ref(null)
-const iframeBaseUrl = 'http://localhost:3000/shop-m/#'
+const iframeBaseUrl = import.meta.env.MODE === 'development' ? 'http://localhost:3000/shop-m/#' : 'https://shop-template.github.io/shop-m/#'
 const iframeUrl = ref(iframeBaseUrl)
 
 //给子页面发消息
