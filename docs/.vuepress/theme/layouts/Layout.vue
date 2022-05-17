@@ -135,6 +135,9 @@ watch(
     background-color: #fff;
   }
 }
+.theme-container.no-sidebar .docs-box {
+  display: none;
+}
 :root {
   --sidebar-width: 15rem;
   --content-width: auto;
