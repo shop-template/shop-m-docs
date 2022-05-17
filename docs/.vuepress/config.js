@@ -1,7 +1,8 @@
-const { defaultTheme } = require('vuepress')
 const { searchPlugin } = require('@vuepress/plugin-search')
+const { defineUserConfig } = require('vuepress')
+const { localTheme } = require('./theme')
 
-module.exports = {
+module.exports = defineUserConfig({
   base: '/shop-m-docs/',
   lang: 'zh_CN',
   title: 'shop-m使用文档',
@@ -9,7 +10,7 @@ module.exports = {
   head: [['link', { rel: 'icon', href: '/images/logo.jpg' }]],
   markdown: {
   },
-  theme: defaultTheme({
+  theme: localTheme({
     // 默认主题配置
     logo: '/images/logo.jpg',
     navbar: [
@@ -58,4 +59,4 @@ module.exports = {
       // 配置项
     }),
   ]
-}
+})

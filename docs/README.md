@@ -2,7 +2,8 @@
 home: true
 lang: zh_CN
 title: shop-m使用文档
-description: shop-m 移动端个人商场项目 使用文档
+description: Vue 3 + Vue Router + pinia + Vant 构建的移动端项目框架 使用文档
+tagline: Vue 3 + Vue Router + pinia + Vant 构建的移动端项目框架
 meta:
   - name: keywords
     content: shop-m, 移动端个人商场项目
@@ -23,6 +24,6 @@ features:
 footer: MIT Licensed | Copyright © 2022-present fxss5201
 ---
 
-# shop-m 移动端个人商场项目
+# shop-m 移动端项目
 
-shop-m 移动端个人商场项目主要是封装日常使用的 tabbar、navbar、权限、cookie、注册登录忘记密码 等常用功能。
+shop-m 移动端项目主要是封装日常使用的 tabbar、navbar、权限、cookie、注册登录忘记密码 等常用功能。
