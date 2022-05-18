@@ -9,19 +9,6 @@ const iframeId = ref(null)
 const iframeBaseUrl = import.meta.env.MODE === 'development' ? 'http://localhost:3000/shop-m/#' : 'https://shop-template.github.io/shop-m/#'
 const iframeUrl = ref(iframeBaseUrl)
 
-//给子页面发消息
-function setChildrenInfo(path) {
-  iframeId.value && iframeId.value.contentWindow.postMessage(
-    {
-      cmd: 'setPath', 
-      res: {
-        path
-      }
-    },
-    '*'
-  )
-}
-
 // 根据父 path 拿到 子 path
 function parentPathToChildrenPath(parentPath) {
   const cur = pathList.find(x => x.parentPath === parentPath)
@@ -62,7 +49,13 @@ watch(
   async (val) => {
     await nextTick()
     const childrenPath = parentPathToChildrenPath(val.path)
-    if (childrenPath) setChildrenInfo(childrenPath)
+    if (childrenPath) {
+      if (osEnd.value === 'pc') {
+        iframeId.value && iframeId.value.contentWindow.location.replace(`${iframeBaseUrl}${childrenPath}`)
+      } else {
+        iframeUrl.value = `${iframeBaseUrl}${childrenPath}`
+      }
+    }
   },
   {
     deep: true,
