@@ -18,6 +18,10 @@ module.exports = defineUserConfig({
         text: '首页',
         link: '/',
       },
+      {
+        text: '指南',
+        link: '/guide/',
+      },
     ],
     sidebar: {
       '/guide/': [

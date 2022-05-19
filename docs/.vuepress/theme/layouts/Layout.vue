@@ -89,6 +89,7 @@ watch(
   height: 640px;
   z-index: 1000;
   background-color: #fff;
+  border: 1px solid var(--c-border);
 }
 .docs-box iframe {
   display: block;
