@@ -7,7 +7,19 @@ module.exports = defineUserConfig({
   lang: 'zh_CN',
   title: 'shop-m使用文档',
   description: 'shop-m使用文档',
-  head: [['link', { rel: 'icon', href: '/images/logo.jpg' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/images/logo.jpg' }],
+    [
+      'script', {},
+      `var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?454c6dc05706491a69cab2760aa22b88";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();`
+    ]
+  ],
   markdown: {
   },
   theme: localTheme({
