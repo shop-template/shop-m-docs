@@ -2,14 +2,18 @@
 export default [
   {
     parentPath: '/guide/',
-    childrenPath: '/list'
+    childrenPath: '/'
   },
   {
     parentPath: '/guide/getting-started.html',
-    childrenPath: '/user'
+    childrenPath: '/'
+  },
+  {
+    parentPath: '/guide/navBar.html',
+    childrenPath: '/navBar'
   },
   {
     parentPath: '/guide/tabbar.html',
-    childrenPath: '/'
+    childrenPath: '/tabbar'
   }
 ]

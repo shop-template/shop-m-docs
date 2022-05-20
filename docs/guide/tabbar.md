@@ -39,7 +39,7 @@ export const useLayoutTabbar = defineStore('layoutTabbar', {
 })
 ```
 
-在文件 `src/components/LayoutTabbar.vue` 中，控制了 tabbar 的 active:
+在文件 `src/components/LayoutTabbar.vue` 中，控制了 tabbar 的 `active` 和 `show`:
 
 ```js
 import { watch } from 'vue'
@@ -54,6 +54,8 @@ watch(
   () => {
     // 切换 tabbar 的 active
     layoutTabbar.active = layoutTabbar.pathToName(route.path)
+    // 默认只有配置在 layoutTabbar 中的 tabbar 才会展示
+    layoutTabbar.show = layoutTabbar.tabbarToList.includes(route.path)
   },
   {
     deep: true,
@@ -62,11 +64,16 @@ watch(
 )
 ```
 
-并且在 `src/store/layoutTabbar.js` 中还封装了一些公用方法：
+并且在 `src/store/layoutTabbar.js` 中还封装了一些公用方法，在使用公用方法前，需要把 `src/store/layoutNavbar.js` 引入文件：
+
+```js
+import { useLayoutTabbar } from '@/store'
+const layoutTabbar = useLayoutTabbar()
+```
 
 ### setTabBarItem
 
-`setTabBarItem` 设置 tabbar 的单个项，参数为 `{ index: 设置项的索引值, detail: 设置项的具体内容 }` 。例如：
+`setTabBarItem` 设置 tabbar 的单个项，参数为 `{ index: 设置项的索引值, detail: 设置项的具体内容 }` ， detail 参考 <https://vant-contrib.gitee.io/vant/#/zh-CN/tabbar#tabbaritem-props>。例如：
 
 ```js
 // 设置首页
@@ -84,7 +91,7 @@ function setTabBarItemEvent () {
 
 ### addTabbar
 
-`addTabbar` 添加 tabbar，参数为 `{ index: 要添加位置的索引值, detail: 设置项的具体内容 }` 。例如：
+`addTabbar` 添加 tabbar，参数为 `{ index: 要添加位置的索引值, detail: 设置项的具体内容 }` ， detail 参考 <https://vant-contrib.gitee.io/vant/#/zh-CN/tabbar#tabbaritem-props>。。例如：
 
 ```js
 // 新增列表

@@ -30,6 +30,7 @@ module.exports = defineUserConfig({
           children: [
             '/guide/README.md',
             '/guide/getting-started.md',
+            '/guide/navBar.md',
             '/guide/tabbar.md'
           ],
         },

@@ -44,16 +44,20 @@ const OS = function() {
 if (OS.phone || OS.ipad) {
   osEnd.value = 'phone'
 }
+let oldPath = route.path
 watch(
   route,
   async (val) => {
     await nextTick()
-    const childrenPath = parentPathToChildrenPath(val.path)
-    if (childrenPath) {
-      if (osEnd.value === 'pc') {
-        iframeId.value && iframeId.value.contentWindow.location.replace(`${iframeBaseUrl}${childrenPath}`)
-      } else {
-        iframeUrl.value = `${iframeBaseUrl}${childrenPath}`
+    if (val.path !== oldPath) {
+      oldPath = val.path
+      const childrenPath = parentPathToChildrenPath(val.path)
+      if (childrenPath) {
+        if (osEnd.value === 'pc') {
+          iframeId.value && iframeId.value.contentWindow.location.replace(`${iframeBaseUrl}${childrenPath}`)
+        } else {
+          iframeUrl.value = `${iframeBaseUrl}${childrenPath}`
+        }
       }
     }
   },
