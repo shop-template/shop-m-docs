@@ -27,6 +27,8 @@ function changeDialogConfirmButtonTextColorEvent () {
   } else {
     dialogConfirmButtonTextColor.value = '#1989fa'
   }
-  openDialogEvent()
+  nextTick(() => {
+    openDialogEvent()
+  })
 }
 ```
