@@ -9,11 +9,23 @@ export default [
     childrenPath: '/'
   },
   {
+    parentPath: '/guide/cssVar.html',
+    childrenPath: '/demo/cssVar'
+  },
+  {
     parentPath: '/guide/navBar.html',
-    childrenPath: '/navBar'
+    childrenPath: '/demo/navBar'
   },
   {
     parentPath: '/guide/tabbar.html',
-    childrenPath: '/tabbar'
+    childrenPath: '/demo/tabbar'
+  },
+  {
+    parentPath: '/guide/network.html',
+    childrenPath: '/demo/network'
+  },
+  {
+    parentPath: '/guide/vconsole.html',
+    childrenPath: '/demo/vconsole'
   }
 ]

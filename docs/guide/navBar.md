@@ -1,4 +1,4 @@
-# navBar
+# navBar 使用演示
 
 使用 navBar 前请先查看 [vant navBar](https://vant-contrib.gitee.io/vant/#/zh-CN/nav-bar) 使用文档。
 

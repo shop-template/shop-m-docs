@@ -15,10 +15,10 @@ actions:
     link: /guide/
     type: secondary
 features:
-- title: Vue
-  details: Vue 3 + Vue Router + pinia
-- title: Vite
-  details: 新型前端构建工具
+- title: Vue + Vite
+  details: Vue 3 + Vue Router + pinia + Vite
+- title: VueUse
+  details: 一组基于Composition API的实用函数
 - title: UI 库
   details: Vant 3 UI组件库
 footer: MIT Licensed | Copyright © 2022-present fxss5201

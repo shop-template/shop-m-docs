@@ -1,4 +1,4 @@
-# tabbar
+# tabbar 使用演示
 
 使用 tabbar 前请先查看 [vant tabbar](https://vant-contrib.gitee.io/vant/#/zh-CN/tabbar) 使用文档。
 
