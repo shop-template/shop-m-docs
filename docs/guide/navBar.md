@@ -106,7 +106,7 @@ function showNavbarEvent () {
 
 ```js
 function dontShowListAddEvent () {
-  layoutNavbar.dontShowListAdd('/navBar')
+  layoutNavbar.dontShowListAdd('/demo/navBar')
 }
 ```
 
@@ -116,7 +116,7 @@ function dontShowListAddEvent () {
 
 ```js
 function dontShowListRemoveEvent () {
-  layoutNavbar.dontShowListRemove('/navBar')
+  layoutNavbar.dontShowListRemove('/demo/navBar')
 }
 ```
 
@@ -126,7 +126,7 @@ function dontShowListRemoveEvent () {
 
 ```js
 function getNavbarShowEvent () {
-  layoutNavbar.show = layoutNavbar.getNavbarShow('/navBar')
+  layoutNavbar.show = layoutNavbar.getNavbarShow('/demo/navBar')
 }
 ```
 
