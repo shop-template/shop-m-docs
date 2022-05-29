@@ -34,6 +34,10 @@ module.exports = defineUserConfig({
         text: '指南',
         link: '/guide/',
       },
+      {
+        text: '插件',
+        link: '/plugins/',
+      },
     ],
     sidebar: {
       '/guide/': [
@@ -46,7 +50,21 @@ module.exports = defineUserConfig({
             '/guide/navBar.md',
             '/guide/tabbar.md',
             '/guide/network.md',
-            '/guide/vconsole.md'
+            '/guide/vconsole.md',
+            '/guide/login.md',
+            '/guide/userInfo.md',
+            '/guide/permission.md',
+            '/guide/404.md'
+          ],
+        },
+      ],
+      '/plugins/': [
+        {
+          text: '插件',
+          children: [
+            '/plugins/README.md',
+            '/plugins/cookie.md',
+            '/plugins/compressorjs.md',
           ],
         },
       ]

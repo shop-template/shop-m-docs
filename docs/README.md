@@ -24,6 +24,6 @@ features:
 footer: MIT Licensed | Copyright © 2022-present fxss5201
 ---
 
-# shop-m 移动端项目
+## shop-m 移动端项目
 
-shop-m 移动端项目主要是封装日常使用的 tabbar、navbar、权限、cookie、注册登录忘记密码 等常用功能，基于 Vue 3 + Vue Router + pinia ，采用 Vant 3 UI 组件库，开发打包工具采用 Vite 。
+shop-m 移动端项目主要是封装日常使用的 tabbar、navbar、权限、cookie、注册登录忘记密码、个人信息 等常用功能，基于 Vue 3 + Vue Router + pinia ，采用 Vant 3 UI 组件库，开发打包工具采用 Vite 。

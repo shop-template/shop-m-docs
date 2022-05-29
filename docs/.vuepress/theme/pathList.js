@@ -27,5 +27,25 @@ export default [
   {
     parentPath: '/guide/vconsole.html',
     childrenPath: '/demo/vconsole'
+  },
+  {
+    parentPath: '/guide/404.html',
+    childrenPath: '/aaaa'
+  },
+  {
+    parentPath: '/guide/permission.html',
+    childrenPath: '/user'
+  },
+  {
+    parentPath: '/guide/login.html',
+    childrenPath: '/login'
+  },
+  {
+    parentPath: '/guide/userInfo.html',
+    childrenPath: '/userInfo'
+  },
+  {
+    parentPath: '/plugins/compressorjs.html',
+    childrenPath: '/userInfo'
   }
 ]
