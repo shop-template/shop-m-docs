@@ -70,15 +70,17 @@ watch(
 
 <template>
   <ParentLayout>
-    <!-- 因为page每次都重新渲染，所以pc端放在 navbar-after ，但移动端为了放置位置，所以放在 page-bottom -->
+    <!-- 因为page每次都重新渲染，所以pc端放在 navbar-after ，但移动端为了放置位置，所以放在 page-content-bottom -->
     <template #navbar-after>
       <div v-if="osEnd === 'pc'" class="docs-box">
         <iframe :src="iframeUrl" frameborder="0" ref="iframeId"></iframe>
       </div>
     </template>
-    <template #page-bottom>
-      <div v-if="osEnd === 'phone'" class="docs-box">
-        <iframe :src="iframeUrl" frameborder="0" ref="iframeId"></iframe>
+    <template #page-content-bottom>
+      <div v-if="osEnd === 'phone'" class="docs-box-wrap">
+        <div class="docs-box">
+          <iframe :src="iframeUrl" frameborder="0" ref="iframeId"></iframe>
+        </div>
       </div>
     </template>
   </ParentLayout>
@@ -109,32 +111,25 @@ watch(
     padding-right: 380px;
   }
   .docs-box {
-    position: fixed;
-    top: calc(var(--navbar-height) + 50px);
     right: 20px;
-    width: 360px;
-    height: 640px;
-    z-index: 1000;
-    background-color: #fff;
   }
 }
-@media (max-width: 719px) {
+
+@media (max-width: 419px) {
   .page {
     padding-right: 0;
+  }
+  .docs-box-wrap {
+    width: 100vw;
+    margin-left: calc(calc(100% - 100vw) / 2);
   }
   .docs-box {
     position: inherit;
     top: 0;
     right: 0;
     margin: 0 auto;
-    width: 360px;
-    height: 640px;
     z-index: 5;
-    background-color: #fff;
   }
-}
-.theme-container.no-sidebar .docs-box {
-  display: none;
 }
 :root {
   --sidebar-width: 15rem;
