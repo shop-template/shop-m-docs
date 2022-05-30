@@ -131,6 +131,9 @@ watch(
     z-index: 5;
   }
 }
+.theme-container.no-sidebar .docs-box {
+  display: none;
+}
 :root {
   --sidebar-width: 15rem;
   --content-width: auto;
