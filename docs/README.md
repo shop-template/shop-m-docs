@@ -2,8 +2,8 @@
 home: true
 lang: zh_CN
 title: shop-m使用文档
-description: Vue 3 + Vue Router + pinia + Vant 构建的移动端项目框架 使用文档
-tagline: Vue 3 + Vue Router + pinia + Vant 构建的移动端项目框架
+description: Vue 3 + Vue Router + pinia + Vant + VueUse 构建的移动端项目框架 使用文档
+tagline: Vue 3 + Vue Router + pinia + Vant + VueUse 构建的移动端项目框架
 meta:
   - name: keywords
     content: shop-m, 移动端个人商场项目

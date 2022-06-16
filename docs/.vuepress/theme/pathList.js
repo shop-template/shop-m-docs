@@ -2,11 +2,11 @@
 export default [
   {
     parentPath: '/guide/',
-    childrenPath: '/'
+    childrenPath: '/demoList'
   },
   {
     parentPath: '/guide/getting-started.html',
-    childrenPath: '/'
+    childrenPath: '/demoList'
   },
   {
     parentPath: '/guide/cssVar.html',
@@ -47,5 +47,9 @@ export default [
   {
     parentPath: '/plugins/compressorjs.html',
     childrenPath: '/userInfo'
+  },
+  {
+    parentPath: '/plugins/signaturePad.html',
+    childrenPath: '/demo/signaturePad'
   }
 ]

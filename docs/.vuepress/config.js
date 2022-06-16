@@ -65,6 +65,7 @@ module.exports = defineUserConfig({
             '/plugins/README.md',
             '/plugins/cookie.md',
             '/plugins/compressorjs.md',
+            '/plugins/signaturePad.md'
           ],
         },
       ]
