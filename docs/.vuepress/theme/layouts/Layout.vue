@@ -90,7 +90,7 @@ watch(
 .docs-box {
   position: fixed;
   top: calc(var(--navbar-height) + 50px);
-  right: 68px;
+  right: 50px;
   width: 360px;
   height: 640px;
   z-index: 1000;
@@ -106,12 +106,28 @@ watch(
   position: relative;
   padding-right: 450px;
 }
-@media (max-width: 1344px) {
+.back-to-top {
+  z-index: 100;
+}
+@media (max-height: 800px) {
+  .docs-box {
+    top: calc(var(--navbar-height) + 20px);
+  }
+}
+@media (max-height: 730px) {
+  .docs-box {
+    top: calc(var(--navbar-height) + 10px);
+  }
+}
+@media (max-width: 1600px) {
   .page {
     padding-right: 380px;
   }
   .docs-box {
     right: 20px;
+  }
+  .back-to-top {
+    right: 385px;
   }
 }
 
