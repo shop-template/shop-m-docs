@@ -1,9 +1,10 @@
 <script setup>
-import { watch, ref, nextTick } from 'vue'
+import { watch, ref, nextTick, onBeforeUnmount, onMounted } from 'vue'
 import ParentLayout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
 import { useRouter, useRoute } from 'vue-router'
 import pathList from './../pathList.js'
 
+const isDarkMode = ref(false)
 const route = useRoute()
 const iframeId = ref(null)
 const iframeBaseUrl = import.meta.env.MODE === 'development' ? 'http://localhost:3000/shop-m/#' : 'https://shop-template.github.io/shop-m/#'
@@ -66,6 +67,23 @@ watch(
     immediate: true
   }
 )
+
+let observer
+onMounted(() => {
+  const html = document.querySelector("html")
+  isDarkMode.value = html.classList.contains("dark")
+  // watch theme change
+  observer = new MutationObserver(() => {
+    isDarkMode.value = html.classList.contains("dark")
+  })
+  observer.observe(html, {
+    attributeFilter: ["class"],
+    attributes: true,
+  })
+})
+onBeforeUnmount(() => {
+  observer.disconnect()
+})
 </script>
 
 <template>
@@ -84,7 +102,7 @@ watch(
       </div>
     </template>
     <template #page-bottom>
-      <CommentService />
+      <CommentService :darkmode="isDarkMode" />
     </template>
   </ParentLayout>
 </template>
