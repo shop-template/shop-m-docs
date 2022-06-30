@@ -109,13 +109,11 @@ module.exports = defineUserConfig({
     }),
     commentPlugin({
       provider: 'Giscus',
-      Giscus: {
-        repo: 'shop-template/shop-comment',
-        repoId: 'R_kgDOHlcRiw',
-        category: 'General',
-        categoryId: 'DIC_kwDOHlcRi84CP9os',
-        mapping: 'pathname'
-      }
+      repo: 'shop-template/shop-comment',
+      repoId: 'R_kgDOHlcRiw',
+      category: 'General',
+      categoryId: 'DIC_kwDOHlcRi84CP9os',
+      mapping: 'pathname'
     })
   ]
 })
