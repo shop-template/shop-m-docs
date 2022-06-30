@@ -1,6 +1,7 @@
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { defineUserConfig } = require('vuepress')
 const { localTheme } = require('./theme')
+const { copyCodePlugin } = require('vuepress-plugin-copy-code2')
 
 module.exports = defineUserConfig({
   base: '/shop-m-docs/',
@@ -96,6 +97,14 @@ module.exports = defineUserConfig({
   plugins: [
     searchPlugin({
       // 配置项
+    }),
+    copyCodePlugin({
+      locales: {
+        '/': {
+          copy: '复制代码成功',
+          hint: '复制代码'
+        }
+      }
     })
   ]
 })
