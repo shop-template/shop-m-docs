@@ -83,6 +83,9 @@ watch(
         </div>
       </div>
     </template>
+    <template #page-bottom>
+      <CommentService />
+    </template>
   </ParentLayout>
 </template>
 

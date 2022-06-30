@@ -2,6 +2,7 @@ const { searchPlugin } = require('@vuepress/plugin-search')
 const { defineUserConfig } = require('vuepress')
 const { localTheme } = require('./theme')
 const { copyCodePlugin } = require('vuepress-plugin-copy-code2')
+const { commentPlugin } = require('vuepress-plugin-comment2')
 
 module.exports = defineUserConfig({
   base: '/shop-m-docs/',
@@ -104,6 +105,16 @@ module.exports = defineUserConfig({
           copy: '复制代码成功',
           hint: '复制代码'
         }
+      }
+    }),
+    commentPlugin({
+      provider: 'Giscus',
+      Giscus: {
+        repo: 'shop-template/shop-comment',
+        repoId: 'R_kgDOHlcRiw',
+        category: 'General',
+        categoryId: 'DIC_kwDOHlcRi84CP9os',
+        mapping: 'pathname'
       }
     })
   ]
