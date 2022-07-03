@@ -40,6 +40,19 @@ module.exports = defineUserConfig({
         text: '插件',
         link: '/plugins/',
       },
+      {
+        text: 'github',
+        children: [
+          {
+            text: 'js 版本',
+            link: 'https://github.com/shop-template/shop-m',
+          },
+          {
+            text: 'ts 版本',
+            link: 'https://github.com/shop-template/shop-m-ts',
+          },
+        ],
+      }
     ],
     sidebar: {
       '/guide/': [
@@ -72,7 +85,7 @@ module.exports = defineUserConfig({
         },
       ]
     },
-    repo: 'shop-template/shop-m',
+    // repo: 'shop-template/shop-m',
     docsRepo: 'https://github.com/shop-template/shop-m-docs',
     docsDir: 'docs',
     editLinkText: '在 GitHub 上编辑此页',
