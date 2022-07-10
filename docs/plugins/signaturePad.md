@@ -67,7 +67,7 @@ signaturePad 组件放置于 `src/components/SignaturePad.vue` ，在需要使�
 ```
 
 ```js
-let signaturePad1 = ref(null)
+let signaturePad1 = ref()
 let canvasDataURL1 = ref('')
 const colors = ['#000', '#aaa', '#f00', '#0f0', '#00f']
 
@@ -118,7 +118,7 @@ const getSignature1 = () => {
 ```
 
 ```js
-let signaturePad2 = ref(null)
+let signaturePad2 = ref()
 let canvasDataURL2 = ref('')
 const colors = ['#000', '#aaa', '#f00', '#0f0', '#00f']
 
@@ -224,7 +224,7 @@ defineExpose({
 })
 
 const colorActive = ref(props.colors[0])
-const signaturePadCanvas = ref(null)
+const signaturePadCanvas = ref()
 let signaturePad = null
 onMounted(() => {
   nextTick(() => {

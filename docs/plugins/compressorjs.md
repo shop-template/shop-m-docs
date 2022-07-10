@@ -11,7 +11,7 @@
 ```js
 // 头像上传最大 5M (图片经过 compressorjs 压缩之后的大小)
 const userImgMaxSize = 5 * 1024 * 1024
-const userImgUploader = ref(null)
+const userImgUploader = ref()
 function choseUserImgEvent () {
   userImgUploader.value.chooseFile()
 }

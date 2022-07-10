@@ -6,7 +6,7 @@ import pathList from './../pathList.js'
 
 const isDarkMode = ref(false)
 const route = useRoute()
-const iframeId = ref(null)
+const iframeId = ref()
 const iframeBaseUrl = import.meta.env.MODE === 'development' ? 'http://localhost:3000/shop-m/#' : 'https://shop-template.github.io/shop-m/#'
 const iframeUrl = ref(iframeBaseUrl)
 
