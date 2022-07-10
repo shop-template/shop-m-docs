@@ -16,6 +16,7 @@ function choseUserImgEvent () {
   userImgUploader.value.chooseFile()
 }
 function userImgBeforeRead (file) {
+  Toast('文件压缩中...')
   return new Promise((resolve) => {
     // compressorjs 默认开启 checkOrientation 选项、图片压缩
     new Compressor(file, {
