@@ -22,9 +22,23 @@
 
 从 GitHub 仓库中直接安装最新的脚手架代码。
 
+::: code-tabs#compressorjs
+
+@tab js
+
 ```sh
 git clone --depth=1 https://github.com/shop-template/shop-m.git my-project
+```
 
+@tab ts
+
+```sh
+git clone --depth=1 https://github.com/shop-template/shop-m-ts.git my-project
+```
+
+:::
+
+```sh
 cd my-project
 
 删除 .git 文件夹

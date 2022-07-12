@@ -3,6 +3,7 @@ const { defineUserConfig } = require('vuepress')
 const { localTheme } = require('./theme')
 const { copyCodePlugin } = require('vuepress-plugin-copy-code2')
 const { commentPlugin } = require('vuepress-plugin-comment2')
+const { mdEnhancePlugin } = require("vuepress-plugin-md-enhance")
 
 module.exports = defineUserConfig({
   base: '/shop-m-docs/',
@@ -127,6 +128,10 @@ module.exports = defineUserConfig({
       category: 'General',
       categoryId: 'DIC_kwDOHlcRi84CP9os',
       mapping: 'pathname'
+    }),
+    mdEnhancePlugin({
+      tabs: true,
+      codetabs: true,
     })
   ]
 })
