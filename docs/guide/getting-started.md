@@ -22,7 +22,7 @@
 
 从 GitHub 仓库中直接安装最新的脚手架代码。
 
-::: code-tabs#compressorjs
+::: code-tabs#shopM
 
 @tab js
 

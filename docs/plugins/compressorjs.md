@@ -15,7 +15,7 @@
 />
 ```
 
-::: code-tabs#compressorjs
+::: code-tabs#shopM
 
 @tab js
 

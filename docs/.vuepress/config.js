@@ -130,8 +130,10 @@ module.exports = defineUserConfig({
       mapping: 'pathname'
     }),
     mdEnhancePlugin({
+      container: true,
       tabs: true,
       codetabs: true,
+      tasklist: true
     })
   ]
 })
