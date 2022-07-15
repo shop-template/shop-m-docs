@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-60ff48c9","path":"/guide/cssVar.html","title":"cssVar \u4E3B\u9898\u989C\u8272","lang":"zh_CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1653201758000,"contributors":[{"name":"fxss","email":"723107234@qq.com","commits":3}]},"filePathRelative":"guide/cssVar.md"}');export{e as data};
